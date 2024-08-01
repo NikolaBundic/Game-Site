@@ -1,0 +1,93 @@
+<div class="custom-gradient">
+    <div class="center" fxLayout="row" fxLayoutAlign="center center" fxFlex.gt-sm="30%" fxFlex.gt-md="50%" fxFlex.gt-lg="80%">
+        <h4 class="error">{{message}}</h4>
+        <form (ngSubmit)="createCharacter(characterForm)" #characterForm="ngForm">
+            <div ngModelGourp="character">
+                <div class="character-name margin">
+                    <label class="form_label">Character Name</label>
+                    <input 
+                        type="text"
+                        class="form-control"
+                        ngModel #productName="ngModel"
+                        name ="name"
+                        required
+                    >
+                </div>
+                <div class="character-image margin">
+                    <label class="form_label">Character Image Link</label>
+                    <input 
+                        type="text"
+                        class="form-control"
+                        ngModel #characterImg="ngModel"
+                        name="imgUrl"
+                        required
+                    >
+                </div>
+                <div class="character-description margin">
+                    <label class="form_label">Character Description</label>
+                    <input 
+                        type="text"
+                        class="form-control"
+                        ngModel #characterDescription="ngModel"
+                        name="description"
+                    >
+                </div>
+                <div class="character-height margin">
+                    <label class="form_label">Character Height</label>
+                    <input 
+                        type="number"
+                        class="form-control"
+                        ngModel #characterHeight="ngModel"
+                        name="height"
+                        required
+                    >
+                </div>
+                <div class="character-weight margin">
+                    <label class="form_label">Character Weight</label>
+                    <input 
+                        type="number"
+                        class="form-control"
+                        ngModel #characterWeight="ngModel"
+                        name="weight"
+                    >
+                </div>
+                <label class="form_label">Character Blood Type</label>
+                <div class="row margin">
+                    <div class="blood-type col-12 col-md-6 col-lg-3">
+                        <input 
+                            type="radio"
+                            value="0"
+                            ngModel #characterType="ngModel"
+                            name="typeCharacter"
+                        > 0
+                    </div>
+                    <div class="blood-type col-12 col-md-6 col-lg-3">
+                        <input 
+                            type="radio"
+                            value="A"
+                            ngModel #characterType="ngModel"
+                            name="typeCharacter"
+                        > A
+                    </div>
+                    <div class="blood-type col-12 col-md-6 col-lg-3">
+                        <input 
+                            type="radio"
+                            value="B"
+                            ngModel #characterType="ngModel"
+                            name="typeCharacter"
+                        > B
+                    </div>
+                    <div class="blood-type col-12 col-md-6 col-lg-3">
+                        <input 
+                            type="radio"
+                            value="AB"
+                            ngModel #characterType="ngModel"
+                            name="typeCharacter"
+                        > AB
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary margin">Submit</button>
+        </form>
+    </div>
+</div>

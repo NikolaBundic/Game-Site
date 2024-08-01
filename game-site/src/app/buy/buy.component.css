@@ -1,0 +1,43 @@
+.form-container {
+    padding-top: 6vh;
+    display: flex;
+    justify-content: center;
+}
+
+.inputfields{
+    width: 25vw;
+}
+
+@media (max-width: 600px) {
+    .inputfields {
+      width: 90vw;
+    }
+  }
+
+  @media (min-width: 601px) and (max-width: 1200px) {
+    .inputfields {
+      width: 60vw;
+    }
+  }
+
+h1{
+    padding-bottom: 2vh;
+}
+
+label, h4{
+    padding: 1vh;
+}
+
+button{
+    margin: 2vh;
+}
+
+form{
+    border: 2px solid #000000;
+    border-radius: 25px;
+    padding: 2vw;
+}
+
+.form-container{
+  background: linear-gradient(90deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+}

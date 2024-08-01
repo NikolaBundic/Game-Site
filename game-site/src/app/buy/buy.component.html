@@ -1,0 +1,46 @@
+<div class="form-container">
+    <form [formGroup]="purchaseForm" (ngSubmit)="onSubmit()">
+        <h1>Purchase Game</h1>
+        <div class="form-group">
+        <label for="playerName">Player Name</label>
+        <input type="text" id="playerName" class="form-control inputfields" formControlName="playerName">
+        <div *ngIf="purchaseForm.get('playerName')?.invalid && purchaseForm.get('playerName')?.touched" class="text-danger">
+            Player name is required.
+        </div>
+        </div>
+    
+        <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" class="form-control inputfields" formControlName="email">
+        <div *ngIf="purchaseForm.get('email')?.invalid && purchaseForm.get('email')?.touched" class="text-danger">
+            Please enter a valid email address.
+        </div>
+        </div>
+    
+        <div class="form-group">
+        <label for="edition">Game Version</label>
+        <select id="edition" class="form-control inputfields" formControlName="edition" [(ngModel)]="selectedEdition">
+            <option value="Street Fighter II">Street Fighter II</option>
+            <option value="Street Fighter II Turbo">Street Fighter II Turbo</option>
+            <option value="Super Street Fighter II">Super Street Fighter II</option>
+        </select>
+        <div *ngIf="purchaseForm.get('edition')?.invalid && purchaseForm.get('edition')?.touched" class="text-danger">
+            Edition choice is required.
+        </div>
+        </div>
+
+        <div class="form-group">
+            <label for="creditCard">Credit Card Number</label>
+            <input type="text" id="creditCard" class="form-control inputfields" formControlName="creditCard">
+            <div *ngIf="purchaseForm.get('creditCard')?.invalid && purchaseForm.get('creditCard')?.touched" class="text-danger">
+                Please enter a valid 16-digit credit card number.
+            </div>
+        </div>
+    
+        <div>
+            <h4>{{ selectedEditionLabel }}</h4>
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Purchase</button>
+    </form>
+</div> 

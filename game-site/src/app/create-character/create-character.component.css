@@ -1,0 +1,32 @@
+.center {
+    margin: auto;
+    width: 30%;
+    border-radius: 25px;
+    border: 2px solid #000000;
+    padding: 10px;
+  }
+
+.margin {
+    margin: 1rem;
+}
+
+@media (max-width: 600px) {
+    .center {
+      width: 80%;
+    }
+  }
+
+  @media (min-width: 601px) and (max-width: 1200px) {
+    .center {
+      width: 50%;
+    }
+  }
+
+.custom-gradient{
+  background: linear-gradient(90deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+  padding: 3rem;
+}
+
+input.ng-invalid.ng-touched {
+  border: 1px solid red;
+}

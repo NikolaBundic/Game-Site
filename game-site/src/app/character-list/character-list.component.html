@@ -1,0 +1,7 @@
+<div class="row gradient-custom">
+    <h1 style="padding: 1rem;">Characters</h1>
+    <div class="col-12 col-md-6 col-lg-4" *ngFor="let character of characters | async">
+        <app-character-cards [character]="character">
+        </app-character-cards>
+    </div>
+</div>
